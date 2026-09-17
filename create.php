@@ -17,17 +17,34 @@
 	}
 ?>
 
-<?php	require_once "includes/header.php";	?>
+<?php
+	$title = "Enrol Student";
+	require_once "includes/header.php";
+?>
 
 	<section>
+		<h1>Enrol A Student</h1>
+
 		<form action="create.php" method="post">
 			<ul>
-				<input type="text" id="name" name="name" placeholder="Student Name">
-				<input type="email" id="email" name="email" placeholder="user@email.com">
-				<input type="text" id="phone" name="phone" placeholder="+254700000000">
-				<input type="text" id="course" name="course" placeholder="Course Name">
+				<li>
+					<label for="name">Student Name</label>
+					<input type="text" id="name" name="name" placeholder="e.g. Jane Doe" required>
+				</li>
+				<li>
+					<label for="email">Email Address</label>
+					<input type="email" id="email" name="email" placeholder="jane@example.com" required>
+				</li>
+				<li>
+					<label for="phone">Phone Number</label>
+					<input type="text" id="phone" name="phone" placeholder="+254700000000">
+				</li>
+				<li>
+					<label for="course">Course Name</label>
+					<input type="text" id="course" name="course" placeholder="e.g. Computer Science" required>
+				</li>
 			</ul>
-			
+
 			<button type="submit">Submit</button>
 		</form>
 	</section>
